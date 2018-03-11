@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Fiap.ioT.UI.Models.Medida>
+
+@{
+    ViewBag.Title = "FIAP - Projeto ioT";
+}
+
+<div class="form-horizontal">
+    <br>
+    <h3>Lista das últmas medições</h3>
+    <div class="form-group">
+        <table class="table table-responsive" style="width:400px">
+            <tr>
+                <td style="padding-left:15px">
+                    @Html.Label("Medidas")
+                </td>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="padding-left:15px">
+                        @Html.DisplayFor(modelItem => item.Valor)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>  
